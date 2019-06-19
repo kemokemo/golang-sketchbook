@@ -1,0 +1,63 @@
+openapi: 3.0.2
+info:
+  title: sample worker's api for job queue 'fireworq'
+  version: 0.0.1
+servers:
+- description: development server
+  url: http://localhost:8080
+paths:
+  /works:
+    post:
+      description: お仕事する
+      operationId: postWorks
+      requestBody:
+        $ref: '#/components/requestBodies/Issues'
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostResponse'
+          description: 処理の実行結果
+components:
+  requestBodies:
+    Issues:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/PostRequests'
+      description: 処理するIssue
+      required: true
+  responses:
+    PostResponse:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/PostResponse'
+      description: 処理の実行結果
+  schemas:
+    PostRequests:
+      example:
+        contents: issue's description
+        id: 1
+      properties:
+        id:
+          example: 1
+          format: int32
+          type: integer
+        contents:
+          example: issue's description
+          type: string
+      type: object
+    PostResponse:
+      example:
+        message: It's working!
+        status: success
+      properties:
+        status:
+          example: success
+          type: string
+        message:
+          example: It's working!
+          type: string
+      type: object
