@@ -1,12 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"rsc.io/quote"
+)
 
 func main() {
-	fmt.Println("Hello gophers!")
-}
-
-// Foo is the foo struct.
-type Foo struct {
-	name string
+	fmt.Println(quote.Hello())
 }
