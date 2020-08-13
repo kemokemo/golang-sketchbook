@@ -1,4 +1,4 @@
-module bitbucket.org/kemoworks/pg-api-echo
+module github.com/kemokemo/golang-sketchbook/everybody-go/pg-api-echo
 
 go 1.13
 
