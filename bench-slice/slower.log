@@ -1,0 +1,15 @@
+goos: darwin
+goarch: amd64
+pkg: github.com/kemokemo/golang-sketchbook/bench-slice
+BenchmarkMakeSlice-12    	 5539407	       215 ns/op
+BenchmarkMakeSlice-12    	 6362814	       185 ns/op
+BenchmarkMakeSlice-12    	 6390092	       187 ns/op
+BenchmarkMakeSlice-12    	 6331642	       188 ns/op
+BenchmarkMakeSlice-12    	 6314706	       186 ns/op
+BenchmarkMakeSlice-12    	 6247687	       185 ns/op
+BenchmarkMakeSlice-12    	 6200557	       188 ns/op
+BenchmarkMakeSlice-12    	 6388999	       193 ns/op
+BenchmarkMakeSlice-12    	 6302989	       190 ns/op
+BenchmarkMakeSlice-12    	 6319882	       188 ns/op
+PASS
+ok  	github.com/kemokemo/golang-sketchbook/bench-slice	14.297s
