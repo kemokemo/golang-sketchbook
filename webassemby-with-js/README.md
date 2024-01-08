@@ -36,3 +36,10 @@ goexec 'http.ListenAndServe(`:8080`, http.FileServer(http.Dir(`.`)))'
 ```
 
 ブラウザで`http://localhost:8080/`を開いたら動作確認が可能。
+
+## メモ
+
+* [Go WebAssembly Tutorial - Building a Calculator](https://www.youtube.com/watch?v=4kBvvk2Bzis)
+  * `golang`のメソッドをJavaScriptから呼び出すための登録方法がわかりやすい
+  * 少し情報が古くて`syscall/js`の関数名が変わっているので、以下の記事も参照
+* [Golang's syscall/js js.NewCallback is undefined](https://stackoverflow.com/questions/55800163/golangs-syscall-js-js-newcallback-is-undefined)

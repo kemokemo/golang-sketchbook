@@ -7,16 +7,15 @@
 	<title>Document</title>
 	<link rel="icon" type="image/png" href="/favicon.png" sizes="32x32" />
 	<script src="wasm_exec.js"></script>
-	<script>
-		const go = new Go();
-		WebAssembly.instantiateStreaming(fetch("main.wasm"), go.importObject).then((result) => {
-			go.run(result.instance);
-		});
-	</script>
+	<script src="main.js"></script>
 </head>
 
 <body>
-
+	<p>WebAssemblyを読みこんで使うテスト</p>
+	<div>
+		<button id="add-button">7 + 8 =</button>
+		<span id="result"></span>
+	</div>
 </body>
 
 </html>
